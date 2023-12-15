@@ -1,0 +1,22 @@
+{
+    "name": "aidsoul/img-actions",
+    "description": "image action",
+    "type": "library",
+    "require": {
+        "symfony/var-dumper": "^6.0",
+        "spatie/image-optimizer": "^1.7",
+        "spatie/image": "^2.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AidSoul\\ImageActions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AidSoul",
+            "email": "work-aidsoul@outlook.com"
+        }
+    ]
+}
