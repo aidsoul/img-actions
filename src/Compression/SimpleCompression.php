@@ -3,12 +3,22 @@
 namespace AidSoul\ImageActions\Compression;
 
 /**
- * Undocumented class
+ * SimpleCompression
+ *
+ * @author AidSoul <work-aidsoul@outlook.com>
  */
 class SimpleCompression
 {
-
-    public static function compression(string $imagePath, string $saveImagePath, $quality){
+    /**
+     * Compression function
+     *
+     * @param string $imagePath
+     * @param string $saveImagePath
+     * @param [type] $quality
+     * @return void
+     */
+    public static function compression(string $imagePath, string $saveImagePath, $quality)
+    {
         $info = getimagesize($imagePath);
 
         if ($info['mime'] == 'image/jpeg') {
@@ -18,9 +28,9 @@ class SimpleCompression
         } elseif ($info['mime'] == 'image/png') {
             $image = imagecreatefrompng($imagePath);
         }
-    
+
         imagejpeg($image, $saveImagePath, $quality);
-    
+
         return $saveImagePath;
     }
 }

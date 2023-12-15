@@ -11,14 +11,28 @@ use Imagick;
  */
 class Compression
 {
+    /**
+     * @var string
+     */
     protected string $saveImagePath;
+
+    /**
+     * @var integer
+     */
     protected int $compressionQuality = 80;
+
+    /**
+     * @var Imagick
+     */
     protected Imagick $imagick;
 
     public const IMAGE_FORMAT_PNG = 'png';
     public const IMAGE_FORMAT_JPG = 'jpg';
     public const IMAGE_FORMAT_WEBP = 'webp';
 
+    /**
+     * @param string $imagePath
+     */
     public function __construct(string $imagePath)
     {
         $this->imagick = new Imagick($imagePath);

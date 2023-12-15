@@ -2,8 +2,16 @@
 
 namespace AidSoul\ImageActions\Compression;
 
+/**
+ * JpegCompression class
+ * 
+ * @author AidSoul <work-aidsoul@outlook.com>
+ */
 class JpegCompression extends Compression
 {
+    /**
+     * @return void
+     */
     protected function execute(): void
     {
         // $newImage->setCompression(80);
